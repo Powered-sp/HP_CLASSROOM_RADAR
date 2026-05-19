@@ -8,7 +8,7 @@ import pystray
 from pystray import MenuItem as item
 import urllib.request
 
-VERSION_ACTUAL = "1.2"
+VERSION_ACTUAL = "1.3"
 URL_VERSION = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/version.txt"
 URL_CODIGO = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/TEST1.py"
 
@@ -51,7 +51,7 @@ class ClassroomRadar:
         
         self.root = tk.Tk()
         self.root.attributes('-fullscreen', True, '-topmost', True)
-        self.root.configure(bg='green')
+        self.root.configure(bg='yellow')
         self.root.config(cursor="arrow") 
 
         self.root.bind("<Escape>", lambda e: self.close_alert())

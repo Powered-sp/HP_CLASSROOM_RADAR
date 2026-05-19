@@ -87,23 +87,15 @@ class ClassroomRadar:
         main_frame = tk.Frame(self.root, bg="black")
         main_frame.place(relx=0.5, rely=0.5, anchor="center")
 
-        tk.Label(main_frame, text="HP CLASSROOM MANAGER RADAR", 
-                 fg="deepskyblue", bg="black", font=("Arial", 25, "bold")).pack()
+        tk.Label(main_frame, text="HP CLASSROOM RADAR", fg="deepskyblue", bg="black", font=("Arial", 25, "bold")).pack(pady=(0, 30))
         
-        tk.Label(main_frame, text="CONEXIÓN REMOTA DETECTADA", 
-                 fg="yellow", bg="black", font=("Arial", 22, "italic")).pack(pady=20)
-
-        self.alert_top = tk.Label(main_frame, text="ATENCIÓN", 
-                                  fg="red", bg="black", font=("Arial Black", 70, "bold"))
+        self.alert_top = tk.Label(main_frame, text="ATENCIÓN", fg="red", bg="black", font=("Arial Black", 70, "bold"))
         self.alert_top.pack()
-
-        self.alert_bottom = tk.Label(main_frame, text="PROFESOR CONECTADO", 
-                                     fg="red", bg="black", font=("Arial Black", 50, "bold"))
+        
+        self.alert_bottom = tk.Label(main_frame, text="PROFESOR CONECTADO", fg="red", bg="black", font=("Arial Black", 50, "bold"))
         self.alert_bottom.pack(pady=(0, 40))
-
-        tk.Button(main_frame, text="VOLVER AL ORDENADOR", command=self.close_alert, 
-                  bg="#333333", fg="white", font=("Arial", 14, "bold"), 
-                  padx=40, pady=20, relief="flat").pack()
+        
+        tk.Button(main_frame, text="VOLVER AL ORDENADOR", command=self.close_alert, bg="#333333", fg="white", font=("Arial", 14, "bold"), padx=40, pady=20, relief="flat").pack()
 
         self.root.bind("<Escape>", lambda e: self.close_alert())
         self.blink()
@@ -153,11 +145,11 @@ try:
     initial_img = radar.create_dynamic_image('green')
     
     menu_radar = pystray.Menu(
-        item(VERSION_ACTUAL, lambda: None, enabled=False),
-        item('Cerrar Radar', on_quit)
+        item('Cerrar Radar', on_quit),
+        item(VERSION_ACTUAL, lambda: None, enabled=False)
     )
     
-    icon_radar = pystray.Icon("Radar", initial_img, "HP CLASSROOM MANAGER RADAR", menu_radar)
+    icon_radar = pystray.Icon("Radar", initial_img, "HP CLASSROOM RADAR", menu_radar)
     radar.icon = icon_radar
     
     threading.Thread(target=radar.run_radar, daemon=True).start()

@@ -10,7 +10,7 @@ import urllib.request
 
 VERSION_ACTUAL = "1.2"
 URL_VERSION = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/version.txt"
-URL_CODIGO = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/radar.pyw"
+URL_CODIGO = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/TEST1.py"
 
 class ClassroomRadar:
     def __init__(self):

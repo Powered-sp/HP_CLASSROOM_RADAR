@@ -10,7 +10,7 @@ from pystray import MenuItem as item
 import urllib.request
 import ctypes
 
-VERSION_ACTUAL = "2.1"
+VERSION_ACTUAL = "2.2"
 URL_VERSION = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/version.txt"
 URL_CODIGO = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/HP_CLASSROOM_RADAR.pyw"
 

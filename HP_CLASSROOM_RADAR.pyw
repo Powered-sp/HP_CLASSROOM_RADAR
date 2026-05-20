@@ -10,7 +10,7 @@ from pystray import MenuItem as item
 import urllib.request
 import ctypes
 
-VERSION_ACTUAL = "2.0"
+VERSION_ACTUAL = "2.1"
 URL_VERSION = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/version.txt"
 URL_CODIGO = "https://raw.githubusercontent.com/Powered-sp/HP_CLASSROOM_RADAR/refs/heads/main/HP_CLASSROOM_RADAR.pyw"
 
@@ -146,7 +146,7 @@ try:
     
     menu_radar = pystray.Menu(
         item('Cerrar Radar', on_quit),
-        item(VERSION_ACTUAL, lambda: None, enabled=False)
+        item(VERSION_ACTUAL, lambda: None)
     )
     
     icon_radar = pystray.Icon("Radar", initial_img, "HP CLASSROOM RADAR", menu_radar)

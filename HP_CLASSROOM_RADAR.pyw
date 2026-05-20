@@ -146,7 +146,7 @@ try:
     
     menu_radar = pystray.Menu(
         item('Cerrar Radar', on_quit),
-        item(VERSION_ACTUAL, lambda: None)
+        item(f"Versión: {VERSION_ACTUAL}", lambda: None)
     )
     
     icon_radar = pystray.Icon("Radar", initial_img, "HP CLASSROOM RADAR", menu_radar)
